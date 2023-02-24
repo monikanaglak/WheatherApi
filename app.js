@@ -1,14 +1,16 @@
-
 let city = document.getElementById("city");
 let btn = document.querySelector("#btn");
 let weather = {
   apiKey: "9a947decfc79f5effa7b7d90a7f7093d",
-  fetchWeather:function(){
-    fetch("https://api.openweathermap.org/data/2.5/weather?q=Leszno&appid=9a947decfc79f5effa7b7d90a7f7093d")
-    .then((response)=>response.json())
-    .then((data)=>console.log(data))
-    
-  }
+  fetchWeather: function (city) {
+    fetch(
+      "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid="+ this.apiKey 
+    )
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error)=>console.log(error))
+  },
+  
 };
 btn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -20,9 +22,9 @@ btn.addEventListener("click", (e) => {
   document.body.appendChild(container);
 
   inp.value = "";
-  gettingInfos();
+  
 });
 
-const gettingInfos = () => {
+/*const gettingInfos = () => {
   console.log("lets fetch the infos");
-};
+};*/
