@@ -5,13 +5,13 @@ btn_send.addEventListener("click", (e) => {
   const valeur_string =
     /^(?=.{2,50}$)[[a-zàáâäçèéêëìíîïñòóôöùúûü]+(?:['-.\s][a-z]+)*$/i;
   if(input_city.match(valeur_string) && input_city.value !== ""){
-    alert("everything ok")
+    fetchingData(input_city)
   }
   else{
     console.log("sometnih is wrong")
     document.querySelector(".error").innerHTML = "Your data is not correct"
   }
-  fetchingData(input_city);
+  
 });
 
 function fetchingData(input_city) {
