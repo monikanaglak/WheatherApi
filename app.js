@@ -1,12 +1,4 @@
-/*window.onload = setTimeout(() => {
-  let x = document.querySelector(".hello");
-  let y = document.querySelector(".welcome");
-  let z = document.querySelector(".please");
-  x.classList.add("hidden")
-  y.classList.add("hiddenalso")
-  z.classList.add("visible")
-}, "3000")
-*/
+
 let city = document.getElementById("city");
 let btn = document.querySelector("#btn");
 let weather = {
