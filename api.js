@@ -1,29 +1,4 @@
-//animation rotation card
-
-/*const container = document.querySelector(".container");
-const card = document.querySelector(".card");
-
-
-
-container.addEventListener('mousemove', (e) => {
-  let xAxis = (window.innerWidth / 1.5 - e.pageX) / 25;
-  let yAxis = (window.innerHeight / 1 - e.pageY) / 25;
-  card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-});
-
-//animate in
-container.addEventListener("mouseenter", (e) => {
-  card.style.transition = "none";
-  
-});
-//mouse leave
-
-container.addEventListener("mouseleave", (e) => {
-  card.style.transitions = "all 1s ease";
-  card.style.transform = `rotateY(0deg) rotateX(0deg)`;
-
-});
-*/
+const btn_send = document.querySelector("#btn")
 btn_send.addEventListener("click", (e) => {
   e.preventDefault();
   let input_city = document.querySelector(".city").value;
@@ -56,4 +31,5 @@ function displayData(data) {
   console.log(data);
   console.log(data.weather[0].main);
   document.querySelector(".cityy").innerHTML = data.name;
+  document.querySelector(".temperature").innerHTML = Math.round(data.main.temp-273)+"°C";
 }
