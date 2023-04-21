@@ -11,7 +11,6 @@ btn_send.addEventListener("click", (e) => {
   } else {
     document.querySelector(".error").innerHTML =
       "The name of the city is not correct";
-      console.log(input_city)
       input.value = "";
   }
 });
