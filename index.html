@@ -1,46 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Starting weather api</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <lottie-player src="weather.json" background="transparent"  speed="1"  style="width: 300px; height: 300px;" loop controls autoplay></lottie-player>
-        
-        <h1 id="my-text">Check The Weather</h1>
-        
+      <lottie-player
+        src="MAN ON BEACH.json"
+        background="transparent"
+        speed="1"
+        style="width: 800px; height: 800px"
+        loop
+        autoplay
+      ></lottie-player>
     </header>
-    <button class="btn"><a href="starter.html">start</a></button>
-    
-</body>
-<script src="https://unpkg.com/split-type"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
-<script>
-const myText = new SplitType('#my-text')
-gsap.to('.char',{
-    y:0,
-    stagger:0.05,
-    delay:0.2,
-    duration:.1
-})
- 
-setTimeout(()=>{
-    const btn = document.querySelector('.btn');
-    btn.classList.add('show')
-    gsap.to('.show',{
-    y:-200,
-    delay:0.2,
-    duration:.5
-})
-},2500)
 
-</script>
+    <p id="slogan">Do You want to check the weather?</p>
+    <div class="test">
+    <button class="btn"><a href="starter.html">Let's go</a></button>
+    </div>
+  
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+  ></script>
+  <script src="api.js"></script>
+  <script>
+    const myText = new SplitType("#slogan");
+        gsap.to(".char", {
+          y: 0,
+          stagger: 0.05,
+          delay: 0.2,
+          duration: 0.1,
+        });
+    
+        setTimeout(() => {
+          const btn = document.querySelector(".btn");
+          btn.classList.add("show");
+          gsap.to(".show", {
+            y: -150,
+            delay: 0.2,
+            duration: 0.5,
+          });
+        }, 2500);
+        </script>
+    
+  </body>
 </html>
